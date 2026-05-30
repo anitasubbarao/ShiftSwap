@@ -1,0 +1,65 @@
+Preliminary list of rules (more to be added later):
+1. Each person must have the length of time of each shift off before AND after each shift prior to coming into work. So if a shift is 9 hours long, they must have 9 hours before the shift in which they are not working, and 9 hours after in which they are not working.
+2. Residents may swap within different types of shifts with a certain set of rules. Senior Docs can only switch with senior docs (of either UW or H Medi), and junior docs can only switch with junior docs (similarly of either UW or H Medi). Trauma docs can switch with Senior Docs, and trauma team can switch within trauma team.
+3. There cannot be swaps within levels
+4. Non-dyad residents can only swap with non-dyad residents
+5. They may swap between hospitals.
+6. User will provide which shift they want to swap out of. Then, it will provide user with a list of shifts (with corresponding date and individual working that shift) that they can swap with - within the constraints provided.
+7. The shift options must only be show up as an option if the person is a. not working at the same time b. and is not working X number of hours after their last shift and X number of hours before their next shift (X = length of their shift.
+8. There is one additional shift type called Risk. These shifts are scheduled from 6am-6am the following morning. These shifts cannot be moved. But these must be taken into consideration when providing available shift options as a person cannot work a shift while they are scheduled for risk.
+9. Shifts to swap cannot be at the same time as the original shift 
+
+
+Shift Types:
+TD (shift type = Trauma) (level = Trauma Doc) (Start time 6 am, 2 pm, 10 pm; shift length is 9 hours)
+Trauma TD 6 am 
+Trauma TD 2 pm 
+Trauma TD 10 pm 
+
+(shift type = Trauma) (level = Trauma Team) (Start time 6am, 2 pm, 10 pm; shift length is 9 hours) 
+Trauma TT 6 am 
+Trauma TT 2 pm 
+Trauma TT 10 pm 
+
+(shift type = H Medi) (level = Medicine Senior Doc) (Start time 6 am, 2 pm, 10 pm; shift length is 9 hours) 
+H Medi MED SD 6a 
+H Medi MED SD 2p 
+H Medi MED SD 10p (
+
+shift type = H Medi) (level = Medicine Junior Doc) (Start time 6 am, 2 pm, 10 pm; shift length is 9 hours) 
+H Medi MED JD 6a 
+H Medi MED JD 2p 
+H Medi MED JD 10p 
+
+(shift type = H Medi) (level = Medicine Non-Dyad - these are off service residents) (Start time 10 am, 5pm, 10pm; shift length is 9 hours) 
+H Medi MED ND 10a 
+H Medi MED ND 5p 
+H Medi MED ND 10p 
+
+(shift type = HMC) (level = R4 - these are R4s) (Start time 6am, 2pm, 10pm; shift length is 9 hours) 
+HMC R4 R4 T 6a 
+HMC R4 R4 T 2p 
+HMC R4 R4 T 10p 
+
+(shift type = SCH) (level = Seattle Children's) (Start time 6am, 10am, 7pm, 10pm; shift length is 10 hours) 
+SCH SCH 6am 
+SCH SCH 10am 
+SCH SCH 7pm 
+SCH SCH 10pm 
+
+(shift type = UW ED) (level = UW Senior Doc) (Start time 6 am, 2 pm, 10 pm; shift length is 9 hours) 
+UW ED UW SD 6a 
+UW ED UW SD 2p 
+UW ED UW SD 9p 
+
+(shift type = UW ED) (level = UW Junior Doc) (Start time 6 am, 2 pm, 10 pm; shift length is 9 hours) 
+UW ED UW JD 6a 
+UW ED UW JD 2p 
+UW ED UW JD 10p 
+
+(shift type = UW ED) (level = UW Non-Dyad) (Start time 10am, 3pm, 5pm, 10pm; shift length is 9 hours) 
+UW ED UW ND 10a 
+UW ED UW ND 3p
+UW ED UW ND 5p 
+UW ED UW ND 9p
+

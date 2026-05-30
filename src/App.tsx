@@ -390,7 +390,7 @@ function App() {
             onClick={openCsv}
             className="inline-flex items-center rounded-md bg-white text-[#32006e] px-4 py-2 text-sm font-semibold hover:bg-slate-100 transition"
           >
-            {schedule ? "Open different CSV…" : "Open CSV…"}
+            {schedule ? "Open different schedule…" : "Open schedule…"}
           </button>
         </div>
       </header>
@@ -407,11 +407,11 @@ function App() {
         {!schedule ? (
           <div className="rounded-lg border border-dashed border-slate-300 p-12 text-center">
             <p className="text-slate-700">
-              Open the monthly schedule CSV to begin.
+              Open the monthly schedule to begin.
             </p>
             <p className="text-xs text-slate-700 mt-2">
-              The file format is fixed: weekly grid with shift labels in the
-              first column.
+              Accepts .csv, .xls, or .xlsx — a weekly grid with shift labels in
+              the first column.
             </p>
           </div>
         ) : (

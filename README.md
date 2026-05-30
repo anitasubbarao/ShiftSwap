@@ -1,9 +1,10 @@
 # ShiftSwap
 
 A static web app that suggests valid shift-swap candidates for residents in a
-medical center's monthly on-duty schedule. You open the month's CSV, pick your
-name, click the shift you want to swap out of, and ShiftSwap shows who you can
-ask to trade with — subject to the rest, level, and Risk rules in `rules.txt`.
+medical center's monthly on-duty schedule. You open the month's schedule —
+a `.csv` or an Excel `.xls`/`.xlsx` — pick your name, click the shift you want
+to swap out of, and ShiftSwap shows who you can ask to trade with, subject to
+the rest, level, and Risk rules in `rules.txt`.
 
 Everything runs in your browser. The schedule is parsed and queried locally;
 no data is uploaded, and nothing leaves your machine.
@@ -13,6 +14,7 @@ no data is uploaded, and nothing leaves your machine.
 - **React 19 + TypeScript**, built with **Vite**
 - **Tailwind CSS v4** for styling
 - **papaparse** (CSV) and **date-fns** (date math)
+- **SheetJS** (`xlsx`) to read Excel `.xls`/`.xlsx`, loaded on demand so CSV users don't download it
 - Domain logic lives framework-free in `src/lib/swapper/`
 - Deployed as static files to **GitHub Pages** via `.github/workflows/deploy.yml`
 
@@ -57,7 +59,7 @@ Leave that running. It prints a line like:
 
 Open **http://localhost:1420/** in your browser. Then:
 
-1. Click **Open CSV** and pick the month's schedule file.
+1. Click **Open schedule** and pick the month's file (`.csv`, `.xls`, or `.xlsx`).
 2. Choose your name.
 3. Click the shift you want to swap out of — the people you can trade with
    appear on the left.

@@ -16,16 +16,66 @@ no data is uploaded, and nothing leaves your machine.
 - Domain logic lives framework-free in `src/lib/swapper/`
 - Deployed as static files to **GitHub Pages** via `.github/workflows/deploy.yml`
 
-## Develop
+## Run it locally
 
-Requires Node 20.19+ (or 22.12+).
+You normally don't need to — the live site is at
+**https://anitasubbarao.github.io/ShiftSwap/**. Run it locally only when you want
+to change the code or try it offline.
+
+### 1. Install Node.js (one time)
+
+You need **Node.js 20.19+ or 22.12+**. Check what you have:
 
 ```sh
-npm install
-npm run dev      # http://localhost:1420
-npm test         # run the Vitest suite
-npm run build    # production build to dist/
+node --version
 ```
+
+If that errors or shows an older version, install the latest **LTS** from
+[nodejs.org](https://nodejs.org/) (the macOS `.pkg` installer).
+
+### 2. Get the code (one time)
+
+```sh
+git clone https://github.com/anitasubbarao/ShiftSwap.git
+cd ShiftSwap
+npm install        # downloads dependencies into node_modules/
+```
+
+### 3. Start it
+
+```sh
+npm run dev
+```
+
+Leave that running. It prints a line like:
+
+```
+➜  Local:   http://localhost:1420/
+```
+
+### 4. Access it
+
+Open **http://localhost:1420/** in your browser. Then:
+
+1. Click **Open CSV** and pick the month's schedule file.
+2. Choose your name.
+3. Click the shift you want to swap out of — the people you can trade with
+   appear on the left.
+
+The page hot-reloads as you edit the code. Press `Ctrl+C` in the terminal to
+stop the server.
+
+### Other commands
+
+```sh
+npm test           # run the test suite once
+npm run build      # production build into dist/
+npm run preview    # serve the production build locally to sanity-check it
+```
+
+> **Deploying:** you don't run the build by hand to publish. Pushing to `main`
+> triggers `.github/workflows/deploy.yml`, which builds and publishes to GitHub
+> Pages automatically.
 
 ## Schedule fixtures
 
